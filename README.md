@@ -50,7 +50,7 @@
 
 2. Navigate to the project directory:  
    ```bash  
-   cd turbo-fpl  
+   cd Turbo-FPL  
    ```  
 
 3. Install dependencies:  
