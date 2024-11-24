@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Turbo FPL  
 
-## Getting Started
+**Turbo FPL** is a simple and powerful website that utilizes the Fantasy Premier League (FPL) API to display detailed player and manager statistics. It also features a machine learning-powered **Predicted Points** section to help users make better decisions in FPL.  
 
-First, run the development server:
+## Features  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Player Stats:** Explore detailed stats for all Premier League players.  
+- **Manager Stats:** View key information and performance data for FPL managers.
+- **Price Changes:** Predicted price changes for players.
+- **Predicted Points:** Get predictions for player points using a machine learning model trained on historical FPL data.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js, React, TypeScript  
+- **Backend/API:** FPL's free API  
+- **Machine Learning:** RandomForestRegressor model trained on features like goals, assists, clean sheets and expected stats.  
+- **Hosting:** Vercel  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How It Works  
 
-## Learn More
+1. **Player and Manager Data:**  
+   The site fetches real-time data from the FPL API and displays it in a user-friendly format.  
 
-To learn more about Next.js, take a look at the following resources:
+2. **Predicted Points Model:**  
+   The machine learning model predicts player points based on input features such as:  
+   - Minutes played  
+   - Goals scored  
+   - Assists  
+   - Clean sheets  
+   - Yellow cards  
+   - Expected goals (xG)  
+   - Expected assists (xA)  
+   - Expected goals conceded (xGC)  
+   
+   The predictions are displayed in the **Predicted Points** section.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prerequisites  
 
-## Deploy on Vercel
+- Node.js (v18 or later)  
+- Yarn or npm  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/turbo-fpl.git  
+   ```  
+
+2. Navigate to the project directory:  
+   ```bash  
+   cd turbo-fpl  
+   ```  
+
+3. Install dependencies:  
+   ```bash  
+   npm install  
+   # or  
+   yarn install  
+   ```  
+
+4. Start the development server:  
+   ```bash  
+   npm run dev  
+   # or  
+   yarn dev  
+   ```  
+
+5. Open the app in your browser at [http://localhost:3000](http://localhost:3000).  
+
+
+Let me know if you'd like any further customization!
