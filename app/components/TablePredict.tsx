@@ -92,8 +92,8 @@ const TablePredict = ({
         const prediction = predictions[index];
         const adjustedPrediction =
           prediction > Number(player.points_per_game)
-            ? Math.round(prediction * 0.9 * 100) / 100
-            : Math.round(prediction * 1.1 * 100) / 100;
+            ? Math.round(prediction * 0.8 * 100) / 100
+            : Math.round(prediction * 1.2 * 100) / 100;
 
         return { ...player, predicted_points: adjustedPrediction };
       });
