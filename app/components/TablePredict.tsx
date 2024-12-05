@@ -90,12 +90,7 @@ const TablePredict = ({
 
       return players.map((player, index) => {
         const prediction = predictions[index];
-        const adjustedPrediction =
-          prediction > Number(player.points_per_game)
-            ? Math.round(prediction * 0.8 * 100) / 100
-            : Math.round(prediction * 1.2 * 100) / 100;
-
-        return { ...player, predicted_points: adjustedPrediction };
+        return { ...player, predicted_points: prediction };
       });
     } catch (error) {
       console.error("Error running the ONNX model:", error);
